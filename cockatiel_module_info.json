@@ -1,39 +1,31 @@
 {
-  "name": "commend",
-  "description": "chat-command commend \u2014 any verified user may commend another user (unlimited); parses !commend <user> <reason>",
-  "version": "0.1.0",
-  "capabilities": "preprocess",
-  "root_file": "./src/main.rs",
-  "launch_command": "cargo",
-  "command_flags": [
-    "run",
-    "--release"
-  ],
+  "authority": 0,
   "autostart": true,
-  "terminal": false,
   "binary": {
-    "macos": {
-      "x86_64": "target/release/cockatiel_commend",
-      "aarch64": "target/release/cockatiel_commend",
-      "arm": "target/release/cockatiel_commend"
-    },
     "linux": {
-      "x86_64": "target/release/cockatiel_commend",
       "aarch64": "target/release/cockatiel_commend",
-      "arm": "target/release/cockatiel_commend"
+      "arm": "target/release/cockatiel_commend",
+      "x86_64": "target/release/cockatiel_commend"
+    },
+    "macos": {
+      "aarch64": "target/release/cockatiel_commend",
+      "arm": "target/release/cockatiel_commend",
+      "x86_64": "target/release/cockatiel_commend"
     },
     "windows": {
-      "x86_64": "target/release/cockatiel_commend.exe",
       "aarch64": "target/release/cockatiel_commend.exe",
-      "arm": "target/release/cockatiel_commend.exe"
+      "arm": "target/release/cockatiel_commend.exe",
+      "x86_64": "target/release/cockatiel_commend.exe"
     }
   },
-  "price": 0,
-  "min_rank": 0,
-  "authority": 0,
   "build_command": "cargo",
   "build_flags": [
     "build",
+    "--release"
+  ],
+  "capabilities": "preprocess",
+  "command_flags": [
+    "run",
     "--release"
   ],
   "credentials": [
@@ -56,9 +48,17 @@
       "sensitive": false
     }
   ],
+  "description": "chat-command commend — any verified user may commend another user (unlimited); parses !commend <user> <reason>",
+  "launch_command": "cargo",
+  "min_rank": 0,
+  "name": "commend",
+  "price": 0,
   "release": {
-    "repo": "vulbyte/cockatiel_module-commend-rs",
     "base_url": "https://github.com/vulbyte/cockatiel_module-commend-rs/releases/download",
+    "repo": "vulbyte/cockatiel_module-commend-rs",
     "tag": "v0.1.0"
-  }
+  },
+  "root_file": "./src/main.rs",
+  "terminal": false,
+  "version": "0.1.0"
 }
